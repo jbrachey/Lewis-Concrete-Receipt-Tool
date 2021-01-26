@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title id="title">Lewis Concrete Write Up Tool</title>
+</head>
+<body>
+    <h1 id="initialTitle" class="initialTitle">Lewis Concrete Write Up Tool</h1>
+    <div class="secondTitleContainer">
+        <h1 id="secondTitle" class="secondTitle" style="display: none;">Lewis Concrete Receipt</h1>
+    </div>
+    <div class="infoSection">
+        <h4 id="name"></h4>
+        <h4 id="address"></h4>
+        <h4 id="phoneNum"></h4>
+        <h4 id="email"></h4>
+        <h4 id="projectDetails" class="projectDetails"></h3>
+    </div>
+    <div id="dimLines" class="dimLines">
+    </div>
+    <div id="customerInfo" class="customerInfo" style="text-align: center;">
+        <h2 class="custInfo">Customer Information</h2>
+        <label for="custName">Customer name: </label>
+        <input type="text" id="custName" class="custName"></input><br>
+        <label for="custAddress">Customer address: </label>
+        <input type="text" id="custAddress" class="custAddress"></input><br>
+        <label for="custNum">Customer phone number: </label>
+        <input type="text" id="custNum" class="custNum"></input><br>
+        <label for="custEmail">Customer email: </label>
+        <input type="text" id="custEmail" class="custEmail"></input><br>
+        <label for="projectDesc">Project details: </label>
+        <input type="text" id="projectDesc" class="projectDesc"></input>
+    </div>
+    <h2 id="dimensions" class="dimensions">Dimensions</h2>
+    <div id="dimEntries" style="text-align: center;"></div>
+    <div style="text-align: center;">
+        <button onclick="newDimEntry()" id="addDimButton" class="addDimButton">+ Add an additional dimension +</button>
+        <button onclick="removeDimEntry()" style="display: none;" id="removeDimButton" class="removeDimButton">- Remove a dimension -</button>
+    </div>
+    <h2 id="additionalCosts" class="additionalCosts">Additional Costs</h2>
+    <div id="addCosts" style="text-align: center;"></div>
+    <div style="text-align: center;">
+        <button onclick="newAddCost()" id="addCostButton" class="addCostButton">+ Add an aditional cost +</button>
+        <button onclick="removeCost()" style="display: none;" id="removeCostButton" class="removeCostButton">- Remove a cost -</button>
+    </div>
+    <div style="text-align: center;">
+        <button id="submit" class="submit" onclick="submit()">Submit!</button>
+    </div>
+    <script src="logic.js"></script>
+</body>
+</html>
