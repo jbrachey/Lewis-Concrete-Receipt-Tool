@@ -39,6 +39,10 @@
     }
 
     function submit() { // starts making receipt if submit is pressed
+        if (totalDimEntries === 0 && totalAddCosts === 0) {
+            alert("Please enter at least one dimension/cost.");
+            return;
+        }
         for (let i = 0; i < totalDimEntries; i++) {
             if (dimTracker[i].lengths.value.trim() === '' || dimTracker[i].width.value.trim() === ''
             || isNaN(dimTracker[i].lengths.value) || isNaN(dimTracker[i].width.value)) {
